@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #C1121F;
+  --color-primary-dark: #a00e19;
+  --color-secondary: #F4A261;
+  --color-secondary-light: #F4A26120;
+  --color-bg: #FDFDFD;
+  --color-text: #1A1A1A;
+  
+  --font-display: "Outfit", "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-3xl: 3.75rem; /* For the 60px rounded corners in design */
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-bg text-text antialiased;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-display font-extrabold tracking-tight;
+  }
+}
+
+.theme-card {
+  @apply bg-white border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300;
+}
+
+.badge-vibrant {
+  @apply bg-[#F4A26115] px-3 py-1 rounded-full text-secondary text-xs font-bold uppercase tracking-widest inline-flex items-center gap-2;
+}
+
+.btn-theme-primary {
+  @apply bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl hover:bg-primary-dark transition-all active:scale-95;
+}
+
+.btn-theme-secondary {
+  @apply bg-white text-primary px-8 py-4 rounded-xl font-bold text-lg border border-gray-100 shadow-md hover:bg-gray-50 transition-all active:scale-95;
+}
+
+.glass-nav {
+  @apply bg-white/90 backdrop-blur-md border-b border-gray-100;
+}
